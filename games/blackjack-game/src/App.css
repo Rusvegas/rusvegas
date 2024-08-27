@@ -1,0 +1,48 @@
+import styled from 'styled-components';
+
+export const CardContainer = styled.div`
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 60px;
+  height: 80px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  background-color: white; 
+  font-family: 'Times New Roman', Times, serif; // Use a serif font for a card-like feel
+
+  /* Styling for card ranks and suits */
+  & > div { /* Target the direct children divs inside CardContainer */
+    margin: 3px;
+  }
+`;
+
+export const SuitTop = styled.div`
+  align-self: flex-start;
+  font-size: 18px; 
+  color: ${props => props.suit === 'Hearts' || props.suit === 'Diamonds' ? 'red' : 'black'};
+`;
+
+export const SuitBottom = styled.div`
+  align-self: flex-end;
+  font-size: 18px; 
+  transform: rotate(180deg); 
+  color: ${props => props.suit === 'Hearts' || props.suit === 'Diamonds' ? 'red' : 'black'};
+`;
+
+export const Rank = styled.div`
+  font-size: 24px;
+`;
+
+// Optional: Add some basic styling for the game area
+export const GameArea = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh; 
+`;
+

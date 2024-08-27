@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.casino-name {
+  margin: 20px;
+}
+
+.betting-controls {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.betting-info {
+  margin-top: 20px;
+}
+
